@@ -765,7 +765,7 @@ GameObject:
   - component: {fileID: 1378536119}
   - component: {fileID: 1378536118}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: MultiplayerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -899,7 +899,7 @@ GameObject:
   - component: {fileID: 1430295382}
   - component: {fileID: 1430295381}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: SingleplayerText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
