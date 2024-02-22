@@ -9,4 +9,9 @@ public class MainSceneScripts : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+
+    public void ChangeToMultiplayerScene()
+    {
+        SceneManager.LoadScene(2);
+    }
 }
