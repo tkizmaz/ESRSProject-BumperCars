@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Presets;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -15,6 +17,12 @@ public class PlayerController : MonoBehaviour
     private float isGoingForward;
     [SerializeField]
     private GameObject steeringWheel;
+    [SerializeField]
+    private CameraController cameraShake;
+    [SerializeField]
+    private float crashMagnitudeDivider;
+    [SerializeField]
+    private float forceMultiplier;
 
     // Start is called before the first frame update
     void Start()
@@ -45,8 +53,17 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Box")
+        
+        float crashPower = collision.relativeVelocity.magnitude / crashMagnitudeDivider;
+        //Starting coroutine of camera shaking with 0.1 duration and our crashPower.
+        StartCoroutine(cameraShake.CameraShake(0.4f, crashPower));
+        if (collision.rigidbody)
         {
+            if (collision.rigidbody)
+            {
+                //Adding impulse to it with velocity of the car.
+                collision.rigidbody.AddForce(transform.forward * carBody.velocity.x * forceMultiplier, ForceMode.Impulse);
+            }
         }
     }
 }
