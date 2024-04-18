@@ -746,16 +746,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorPool:
+  - {r: 0.6509434, g: 0.13203098, b: 0.13203098, a: 0}
+  - {r: 0.64757663, g: 0.9150943, b: 0.06474723, a: 0}
+  - {r: 0.21361016, g: 0.20496619, b: 0.8867924, a: 0}
+  - {r: 0.8490566, g: 0.04405483, b: 0.8450403, a: 0}
+  - {r: 0.78522855, g: 0.6928622, b: 0.8490566, a: 0}
   - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
-  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0.3186632, g: 0.7264151, b: 0.41912067, a: 0}
+  - {r: 0.40725192, g: 0.5943396, b: 0.014017441, a: 0}
+  - {r: 0.05549129, g: 0.26618332, b: 0.4056604, a: 0}
+  - {r: 0.8396226, g: 0.7089266, b: 0.7089266, a: 0}
 --- !u!4 &993803600
 Transform:
   m_ObjectHideFlags: 0
@@ -1455,7 +1455,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8748821888057033693}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 538b5501e810f4e4095254bd8b9f119d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1509,11 +1509,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  rotationSpeed: 3
+  rotationSpeed: 5
   steeringWheel: {fileID: 319008355}
   cameraShake: {fileID: 1249522514}
   crashMagnitudeDivider: 400
-  forceMultiplier: 1.2
+  forceMultiplier: 2.5
 --- !u!4 &8748821888057033697
 Transform:
   m_ObjectHideFlags: 0
@@ -1542,12 +1542,12 @@ SceneRoots:
   m_Roots:
   - {fileID: 1454739690}
   - {fileID: 538328415}
+  - {fileID: 993803600}
   - {fileID: 204556143}
   - {fileID: 95590056}
   - {fileID: 1661692484}
   - {fileID: 1908307336}
   - {fileID: 8748821888057033697}
-  - {fileID: 993803600}
   - {fileID: 558003914}
   - {fileID: 466723020}
   - {fileID: 1353188033}
