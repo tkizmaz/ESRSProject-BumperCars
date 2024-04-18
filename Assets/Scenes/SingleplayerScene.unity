@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f687f1fcaffc074448bf922b9f20cc0c, type: 2}
     - target: {fileID: 919132149155446097, guid: f4b2cf235119a1645a6b8489875bbb7d, type: 3}
       propertyPath: m_Name
-      value: Ground_1
+      value: KUTU
       objectReference: {fileID: 0}
     - target: {fileID: 3855073655484056057, guid: f4b2cf235119a1645a6b8489875bbb7d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 282822479}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
