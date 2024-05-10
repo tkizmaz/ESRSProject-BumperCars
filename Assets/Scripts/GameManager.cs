@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         playerCount--;
 
         //If the Player is collided with the Zone, meaning game over.
-        if (carName == "Player")
+        if (carName == "SinglePlayer")
         {
 
             //Calling action created in this class and passing true.
