@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
     void DestroyCollisionListener(string carName)
     {
         //If player count is equal to one return.
-        if(playerCount == 1)
+        if (playerCount == 1)
         {
             return;
         }
@@ -27,9 +28,8 @@ public class GameManager : MonoBehaviour
         //If the Player is collided with the Zone, meaning game over.
         if (carName == "SinglePlayer")
         {
-
-            //Calling action created in this class and passing true.
             IsPlayerEliminated(true);
+            //Calling action created in this class and passing true.
         }
 
         else
@@ -51,5 +51,10 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+    }
+
+    public void GoToMainMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }
