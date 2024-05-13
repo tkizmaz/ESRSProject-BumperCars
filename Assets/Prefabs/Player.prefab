@@ -248,7 +248,7 @@ MonoBehaviour:
   rotationSpeed: 5
   steeringWheel: {fileID: 2705545844883182805}
   crashMagnitudeDivider: 400
-  forceMultiplier: 15
+  forceMultiplier: 1
   cameraHolder: {fileID: 7554342674369739219}
 --- !u!54 &6278978819093366804
 Rigidbody:

@@ -14,7 +14,6 @@ public class ZoneController : MonoBehaviour
         //If the tag of the collided object is Car.
         if (collision.gameObject.tag == "Car")
         {
-            Debug.Log("girdi");
             //Trigger the action with the collided object's name.
             DestroyCollision(collision.gameObject.name);
             //Destroy the object.

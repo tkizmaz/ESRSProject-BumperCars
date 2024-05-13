@@ -128,8 +128,16 @@ public class LobbyManager : MonoBehaviour
 
     public async void JoinLobby(Lobby lobby)
     {
-        QueryResponse query = await Lobbies.Instance.QueryLobbiesAsync();
-        await Lobbies.Instance.JoinLobbyByIdAsync(lobby.Id);
+        Player player = GetPlayer();
+
+        joinedLobby = await LobbyService.Instance.JoinLobbyByIdAsync(lobby.Id, new JoinLobbyByIdOptions
+        {
+            Player = player
+        });
+
+        UIManager.instance.ChangeFromLobbyList(playerName, joinedLobby.Name);
+        UIManager.instance.UpdateLobbyUI();
+
     }
 
     public async void JoinLobbyByCode(string lobbyCode)
@@ -208,7 +216,7 @@ public class LobbyManager : MonoBehaviour
         };
     }
 
-    private async void UpdatePlayerName(string newPlayerName)
+    public async void UpdatePlayerName(string newPlayerName)
     {
         playerName = newPlayerName;
         await LobbyService.Instance.UpdatePlayerAsync(joinedLobby.Id, AuthenticationService.Instance.PlayerId, new UpdatePlayerOptions
@@ -219,7 +227,7 @@ public class LobbyManager : MonoBehaviour
 
             }
         });
-
+        UIManager.instance.UpdateName(newPlayerName);
     }
 
     private async void LeaveLobby()

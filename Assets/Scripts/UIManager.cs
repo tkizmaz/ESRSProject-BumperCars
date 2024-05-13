@@ -48,6 +48,8 @@ public class UIManager : MonoBehaviour
     Transform playlerListLayout;
     [SerializeField]
     Button startGameButton;
+    [SerializeField]
+    TMPro.TMP_InputField changeButtonField;
 
 
     private void Awake()
@@ -90,9 +92,10 @@ public class UIManager : MonoBehaviour
 
     public void ShowLobbies(Lobby lobby)
     {
-        Debug.Log(lobby.Name);
-        GameObject button = Instantiate(lobbyButtonPrefab, gridLayoutGroup);
-        button.GetComponentInChildren<Text>().text = lobby.Name;
+        GameObject button = Instantiate(lobbyButtonPrefab, gridLayoutGroup.transform);
+        TMPro.TextMeshProUGUI buttonText = button.GetComponentInChildren<TMPro.TextMeshProUGUI>();
+        string buttonString = lobby.Name + "   " +lobby.Players.Count.ToString() +"/"+ lobby.MaxPlayers.ToString();
+        buttonText.text = buttonString;
         button.GetComponent<Button>().onClick.AddListener(() => LobbyManager.instance.JoinLobby(lobby));
     }
 
@@ -119,7 +122,7 @@ public class UIManager : MonoBehaviour
         joinLobbyPanel.SetActive(false);
         createdLobbyPanel.SetActive(true);
         playerName.text = playerNameInServer;
-        lobbyNameText.text = lobbyName;
+        lobbyNameText.text = "Lobby: "+ lobbyName;
     }
 
     public void PutPlayersInGrid(string eachPlayerName)
@@ -138,7 +141,6 @@ public class UIManager : MonoBehaviour
 
     public void UpdateLobbyUI()
     {
-        Debug.Log("SELAM");
         ClearPlayerList();
         var nameList = LobbyManager.instance.GetAllPlayers();
         foreach(string name in nameList)
@@ -151,6 +153,26 @@ public class UIManager : MonoBehaviour
     public void StartGame()
     {
         LobbyManager.instance.StartGame();
+    }
+
+    public void ChangeName()
+    {
+        LobbyManager.instance.UpdatePlayerName(changeButtonField.text);
+    }
+
+    public void ChangeFromLobbyList(string playerNameInServer, string lobbyName)
+    {
+        listLobbiesPanel.SetActive(false);
+        createdLobbyPanel.SetActive(true);
+        playerName.text = playerNameInServer;
+        lobbyNameText.text = "Lobby: " + lobbyName;
+        startGameButton.gameObject.SetActive(false);
+
+    }
+
+    public void UpdateName(string newName)
+    {
+        playerName.text = newName;
     }
 
 }
