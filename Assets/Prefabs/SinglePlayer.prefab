@@ -254,8 +254,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.7956002, y: 0.7158569, z: 2.1646032}
-  m_Center: {x: -0.006790757, y: 0.39315194, z: -0.049601078}
+  m_Size: {x: 1.7956002, y: 0.8810792, z: 2.1646032}
+  m_Center: {x: -0.006790757, y: 0.47576308, z: -0.049601078}
 --- !u!114 &2385159590147855180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,7 +272,7 @@ MonoBehaviour:
   rotationSpeed: 4
   steeringWheel: {fileID: 0}
   crashMagnitudeDivider: 400
-  forceMultiplier: 15
+  forceMultiplier: 20
   cameraShake: {fileID: 0}
 --- !u!1 &3576058250275440922
 GameObject:

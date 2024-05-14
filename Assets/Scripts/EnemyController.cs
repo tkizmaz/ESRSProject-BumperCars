@@ -89,7 +89,7 @@ public class EnemyController : MonoBehaviour
         if (collision.rigidbody)
         {
             //Adding impulse to it with velocity of the car.
-            collision.rigidbody.AddForce(transform.forward * agentBody.velocity.x * 2);
+            collision.rigidbody.AddForce(transform.forward * agentBody.velocity.x);
         }
 
         //If collided object has rigidbody and velocity magnitude is greater than 2;
