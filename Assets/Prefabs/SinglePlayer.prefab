@@ -272,7 +272,7 @@ MonoBehaviour:
   rotationSpeed: 4
   steeringWheel: {fileID: 0}
   crashMagnitudeDivider: 400
-  forceMultiplier: 20
+  forceMultiplier: 30
   cameraShake: {fileID: 0}
 --- !u!1 &3576058250275440922
 GameObject:

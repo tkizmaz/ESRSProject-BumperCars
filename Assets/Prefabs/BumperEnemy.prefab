@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46108445079054aad94f3c3fba2e3fcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedOfEnemy: 4
+  speedOfEnemy: 5
   faceTurnSpeed: 2
   stayDuration: 3
 --- !u!54 &2255372746493699561
