@@ -5,9 +5,9 @@ public class GameManagerMultiplayer : NetworkBehaviour
 {
     public static GameManagerMultiplayer instance;
     public int totalRounds = 3; // Toplam round sayısı
-    private NetworkVariable<int> currentRound = new NetworkVariable<int>(1); // Mevcut round
+    private NetworkVariable<int> currentRound = new NetworkVariable<int>(1); 
     private bool isGameStarted = false;
-    public NetworkVariable<int> activePlayers = new NetworkVariable<int>(0); // Aktif oyuncu sayısı
+    public NetworkVariable<int> activePlayers = new NetworkVariable<int>(0); 
 
     private void Awake()
     {
@@ -50,7 +50,6 @@ public class GameManagerMultiplayer : NetworkBehaviour
         {
             activePlayers.Value = 2;
             SpawnManager.instance.RespawnAllPlayersServerRpc();
-            // Eğer yeterli oyuncu kalmadıysa, bir sonraki roundu başlat
             StartRoundServerRpc(false);
         }
     }
@@ -59,14 +58,12 @@ public class GameManagerMultiplayer : NetworkBehaviour
     private void EndGame()
     {
         Debug.Log("Oyun bitti. Toplam oynanan round: " + (currentRound.Value - 1));
-        // Oyun bitiminde yapılacak işlemler...
     }
 
     [ClientRpc]
     private void StartRoundClientRpc()
     {
         Debug.Log("Client'da round başladı.");
-        // İstemci tarafında round başlangıcı ile ilgili görsel veya işitsel efektler tetiklenebilir.
     }
 
     public void StartRound(bool isFirstRound)

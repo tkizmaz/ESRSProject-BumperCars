@@ -175,7 +175,7 @@ public class LobbyManager : MonoBehaviour
                 pollTimer = lobbyUpdateTimerMax;
 
                 joinedLobby = await LobbyService.Instance.GetLobbyAsync(joinedLobby.Id);
-                OnPlayerJoined?.Invoke(); // UI güncellemesi için event'i tetikle
+                OnPlayerJoined?.Invoke(); 
 
                 Debug.Log(joinedLobby.Data[KEY_START_GAME].Value);
                 if (joinedLobby.Data[KEY_START_GAME].Value != "0")
