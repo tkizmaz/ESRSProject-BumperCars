@@ -29,7 +29,7 @@ In Multiplayer mode, players can compete against each other. Features include:
 - **Objective**: Knock all opponents off the platform to win the game.
 
 ## Video Demo
-[Watch the gameplay video](https://streamable.com/sb37qg)
+[Watch the gameplay video]([https://streamable.com/sb37qg](https://drive.google.com/file/d/1SnalRNCHM69WOQbN2K0-w3tq7o2eAwNV/view?usp=sharing))
 
 ## Credits
 - **Developer**: Taha Kizmaz
